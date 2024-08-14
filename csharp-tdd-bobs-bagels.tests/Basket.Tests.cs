@@ -1,5 +1,6 @@
 
 using NUnit.Framework;
+using System.ComponentModel;
 using tdd_bobs_bagels.CSharp.Main;
 
 
@@ -12,13 +13,14 @@ namespace csharp_tdd_bobs_bagels.tests
         {
             [TestCase("cremeCheese")]
             // Test for story 1
-            public void Test(string bagelName) {
+            public void Test(string bagelName) 
+            {
                 //arrange 
                 Basket basket = new Basket();
 
 
                 //act
-                int result;
+                basket.add(bagelName);
 
                 //assert
                 Assert.That(basket.items, Does.Contain(bagelName));
