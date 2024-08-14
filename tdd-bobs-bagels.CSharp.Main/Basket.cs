@@ -22,8 +22,12 @@ namespace tdd_bobs_bagels.CSharp.Main
         {
             _items.Add(bagelName);
         }
+        public void remove(string bagelName)
+        {
+            _items.Remove(bagelName);
+        }
 
-       
+
     }
 
 }
