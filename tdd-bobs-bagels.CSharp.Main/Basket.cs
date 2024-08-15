@@ -18,12 +18,13 @@ namespace tdd_bobs_bagels.CSharp.Main
 
         }
 
-        public List<string> items { get => _items; set => _items = value; }
+        public List<string> Items { get => _items; set => _items = value; }
+        public int Capacity { get => _capacity; set => _capacity = value; }
 
         public void add(string bagelName)
 
         {
-            if (_amount <= _capacity)
+            if (_amount <= Capacity)
             {
                 _items.Add(bagelName);
                 _amount++;

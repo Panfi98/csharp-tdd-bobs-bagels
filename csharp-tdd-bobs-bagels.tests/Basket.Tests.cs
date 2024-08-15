@@ -23,7 +23,7 @@ namespace csharp_tdd_bobs_bagels.tests
                 basket.add(bagelName);
 
                 //assert
-                Assert.That(basket.items, Does.Contain(bagelName));
+                Assert.That(basket.Items, Does.Contain(bagelName));
             }
             [TestCase("cremeCheese")]
             // Test for story 2
@@ -37,7 +37,7 @@ namespace csharp_tdd_bobs_bagels.tests
                 basket.remove(bagelName);
 
                 //assert
-                Assert.That(basket.items, Does.Not.Contain(bagelName));
+                Assert.That(basket.Items, Does.Not.Contain(bagelName));
             }
             [TestCase("cremeCheese",4)]
             // Test for story 3
@@ -53,29 +53,25 @@ namespace csharp_tdd_bobs_bagels.tests
 
                 //act
                 basket.remove(bagelName);
-                int resultingLength = basket.items.Count;
+                int resultingLength = basket.Items.Count;
 
                 //assert
                 Assert.IsTrue(length == resultingLength);
             }
-            [TestCase("cremeCheese", 4)]
-            // Test for story 3
-            public void Test4(string bagelName, int length)
+            [TestCase(100)]
+            // Test for story 4
+            public void Test4(int capacity)
             {
                 //arrange 
                 Basket basket = new Basket();
-                basket.add(bagelName);
-                basket.add(bagelName);
-                basket.add(bagelName);
-                basket.add(bagelName);
-                basket.add(bagelName);
+                
 
                 //act
-                basket.remove(bagelName);
-                int resultingLength = basket.items.Count;
+
+                int resultingCapacity = basket.Capacity;
 
                 //assert
-                Assert.IsTrue(length == resultingLength);
+                Assert.IsTrue(resultingCapacity == capacity);
             }
         }
 
