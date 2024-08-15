@@ -39,6 +39,25 @@ namespace csharp_tdd_bobs_bagels.tests
                 //assert
                 Assert.That(basket.items, Does.Not.Contain(bagelName));
             }
+            [TestCase("cremeCheese",4)]
+            // Test for story 3
+            public void Test3(string bagelName, int length)
+            {
+                //arrange 
+                Basket basket = new Basket();
+                basket.add(bagelName);
+                basket.add(bagelName);
+                basket.add(bagelName);
+                basket.add(bagelName);
+                basket.add(bagelName);
+
+                //act
+                basket.remove(bagelName);
+                int resultingLength = basket.items.Count;
+
+                //assert
+                Assert.IsTrue(length == resultingLength);
+            }
         }
 
     }
