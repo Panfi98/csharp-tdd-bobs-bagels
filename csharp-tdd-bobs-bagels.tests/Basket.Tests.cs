@@ -26,7 +26,7 @@ namespace csharp_tdd_bobs_bagels.tests
                 Assert.That(basket.items, Does.Contain(bagelName));
             }
             [TestCase("cremeCheese")]
-            // Test for story 1
+            // Test for story 2
             public void Test2(string bagelName)
             {
                 //arrange 

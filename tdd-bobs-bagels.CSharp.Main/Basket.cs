@@ -10,6 +10,8 @@ namespace tdd_bobs_bagels.CSharp.Main
     public class Basket
     {
         private List<string> _items = new List<string>();
+        private int _capacity = 5;
+        private int _amount = 0;
 
         public Basket() 
         {
@@ -20,7 +22,10 @@ namespace tdd_bobs_bagels.CSharp.Main
 
         public void add(string bagelName)
         {
+           
             _items.Add(bagelName);
+            
+           
         }
         public void remove(string bagelName)
         {
