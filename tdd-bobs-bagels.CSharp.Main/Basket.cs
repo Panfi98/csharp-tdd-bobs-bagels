@@ -35,7 +35,10 @@ namespace tdd_bobs_bagels.CSharp.Main
             }
         }
 
-
+        public void changeCap(int v)
+        {
+            throw new NotImplementedException();
+        }
 
         public void remove(string bagelName)
         {

@@ -64,9 +64,10 @@ namespace csharp_tdd_bobs_bagels.tests
             {
                 //arrange 
                 Basket basket = new Basket();
-                
+
 
                 //act
+                basket.changeCap(100);
 
                 int resultingCapacity = basket.Capacity;
 
