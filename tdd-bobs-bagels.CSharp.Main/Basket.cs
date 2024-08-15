@@ -40,9 +40,11 @@ namespace tdd_bobs_bagels.CSharp.Main
             _capacity = v;
         }
 
-        public void remove(string bagelName)
+        public bool remove(string bagelName)
         {
+            
             _items.Remove(bagelName);
+            return true;
         }
 
 

@@ -74,6 +74,20 @@ namespace csharp_tdd_bobs_bagels.tests
                 //assert
                 Assert.IsTrue(resultingCapacity == capacity);
             }
+            [TestCase("cremeCheese")]
+            public void Test5(string bagelName)
+            {
+                //arrange 
+                Basket basket = new Basket();
+
+
+                //act
+                bool returnResult = basket.remove(bagelName);
+
+
+                //assert
+                Assert.IsTrue(returnResult == false) ;
+            }
         }
 
     }
